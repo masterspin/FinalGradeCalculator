@@ -1,6 +1,8 @@
 const generateBtn = document.querySelector(".generateBtn");
+const submit = document.querySelector(".submit");
 
 generateBtn.addEventListener("click", generateRandomNum);
+submit.addEventListener("click", generateFinalGrade);
 
 function generateRandomNum() {
   const current = document.querySelector(".current").value;
@@ -12,4 +14,16 @@ function generateRandomNum() {
 
   const randomNumEl = document.querySelector(".randomNumEl");
   randomNumEl.innerHTML = lowest;
+}
+
+function generateFinalGrade() {
+  const current2 = document.querySelector(".current2").value;
+  const desired2 = document.querySelector(".desired2").value;
+  const weight2 = document.querySelector(".weight2").value;
+
+  num2 = (desired2 * weight2/100)+((100-weight2)/100)*(current2);
+  calculated = "Your Final Grade: " + Math.round(num2*100)/100 + "%";
+
+  const calculatedScore = document.querySelector(".calculatedScore");
+  calculatedScore.innerHTML = calculated;
 }
