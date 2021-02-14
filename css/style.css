@@ -43,7 +43,7 @@ input[type=text] {
 
 .form__field {
   font-family: inherit;
-  width: 40%;
+  width: 80%;
   border: 0px solid var(--v-red);
   border-bottom: 1px solid var(--v-red);
   float: center;
